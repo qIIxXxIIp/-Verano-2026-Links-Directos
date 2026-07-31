@@ -1,41 +1,143 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Anime Links</title>
-<style>
-body{
-    background:#111;
-    color:white;
-    font-family:Arial;
-    text-align:center;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime Links</title>
 
-a{
-    display:block;
-    margin:15px auto;
-    width:250px;
-    padding:15px;
-    background:#5865F2;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-}
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
 
-a:hover{
-    background:#7289DA;
-}
-</style>
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .search-box {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        #search {
+            width: 400px;
+            padding: 10px;
+            border-radius: 8px;
+            border: none;
+            font-size: 16px;
+        }
+
+        .anime-container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        .anime-card {
+            background: #222;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .anime-card:hover {
+            transform: scale(1.05);
+        }
+
+        .anime-card a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media(max-width: 900px) {
+            .anime-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media(max-width: 600px) {
+            .anime-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
 </head>
+
 <body>
 
-<h1>Anime Links</h1>
+    <h1>Lista de Animes</h1>
 
-<a href="https://www.crunchyroll.com/es/watch/GE00378389ZHCN/lord-of-mysteries-special-city-of-silver" target="_blank">𝐋𝐨𝐫𝐝 𝐨𝐟 𝐌𝐲𝐬𝐭𝐞𝐫𝐢𝐞𝐬 𝐒𝐩𝐞𝐜𝐢𝐚𝐥𝐬</a>
+    <div class="search-box">
+        <input type="text" id="search" placeholder="Buscar anime...">
+    </div>
 
-<a href="https://ejemplo.com/bleach" target="_blank">Bleach</a>
+    <div class="anime-container" id="animeList">
 
-<a href="https://ejemplo.com/frieren" target="_blank">Frieren</a>
+                <div class="anime-card" data-name="Naruto">
+            <a href="https://ejemplo.com" target="_blank">
+                Naruto
+            </a>
+        </div>
+
+        <div class="anime-card" data-name="One Piece">
+            <a href="https://ejemplo.com" target="_blank">
+                One Piece
+            </a>
+        </div>
+
+        <div class="anime-card" data-name="Bleach">
+            <a href="https://ejemplo.com" target="_blank">
+                Bleach
+            </a>
+        </div>
+
+        <div class="anime-card" data-name="Dragon Ball">
+            <a href="https://ejemplo.com" target="_blank">
+                Dragon Ball
+            </a>
+        </div>
+
+        <div class="anime-card" data-name="Jujutsu Kaisen">
+            <a href="https://ejemplo.com" target="_blank">
+                Jujutsu Kaisen
+            </a>
+        </div>
+
+    </div>
+
+        <script>
+
+        const search = document.getElementById("search");
+        const animeCards = document.querySelectorAll(".anime-card");
+
+        search.addEventListener("input", () => {
+
+            const text = search.value.toLowerCase();
+
+            animeCards.forEach(card => {
+
+                const name = card.dataset.name.toLowerCase();
+
+                if (name.includes(text)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
+                }
+
+            });
+
+        });
+
+    </script>
 
 </body>
 </html>
