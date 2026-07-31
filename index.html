@@ -39,23 +39,33 @@
             gap: 15px;
         }
 
-        .anime-card {
-            background: #222;
-            padding: 15px;
-            border-radius: 10px;
-            text-align: center;
-            transition: 0.2s;
-        }
+.anime-card {
+    background: #222;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.2s;
+    text-align: center;
+}
 
-        .anime-card:hover {
-            transform: scale(1.05);
-        }
+.anime-card:hover {
+    transform: scale(1.05);
+}
 
-        .anime-card a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.anime-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.anime-card a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
 
         @media(max-width: 900px) {
             .anime-container {
@@ -82,41 +92,47 @@
 
     <div class="anime-container" id="animeList">
 
-                <div class="anime-card" data-name="Lord of Mysteries Specials">
-            <a href="https://jkanime.net/guimi-zhi-zhu-tebie-pian-liewu/" target="_blank">
-                Lord of Mysteries Specials
-            </a>
-        </div>
+<div class="anime-card" data-name="Lord of Mysteries Specials">
+    <a href="https://jkanime.net/guimi-zhi-zhu-tebie-pian-liewu/" target="_blank">
+        <img src="imagenes/lord-of-mysteries.jpg">
+        Lord of Mysteries Specials
+    </a>
+</div>
 
-        <div class="anime-card" data-name="Heroine? Saint? No, I'm an All-Works Maid (And Proud of It)!">
-            <a href="https://jkanime.net/heroine-seijo-iie-all-works-maid-desu-hokori/" target="_blank">
-                Heroine? Saint? No, I'm an All-Works Maid (And Proud of It)!
-            </a>
-        </div>
+<div class="anime-card" data-name="Heroine? Saint? No, I'm an All-Works Maid (And Proud of It)!">
+    <a href="https://jkanime.net/heroine-seijo-iie-all-works-maid-desu-hokori/" target="_blank">
+        <img src="imagenes/heroine-all-works-maid.jpg">
+        Heroine? Saint? No, I'm an All-Works Maid (And Proud of It)!
+    </a>
+</div>
 
-        <div class="anime-card" data-name="From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage">
-            <a href="https://jkanime.net/rakudai-kenja-no-gakuin-musou-nidome-no-tensei-s-rank-cheat-majutsushi-boukenroku/" target="_blank">
-                From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage
-            </a>
-        </div>
+<div class="anime-card" data-name="From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage">
+    <a href="https://jkanime.net/rakudai-kenja-no-gakuin-musou-nidome-no-tensei-s-rank-cheat-majutsushi-boukenroku/" target="_blank">
+        <img src="imagenes/talentless-sage.jpg">
+        From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage
+    </a>
+</div>
 
-        <div class="anime-card" data-name="The Cat and the Dragon">
-            <a href="https://jkanime.net/neko-to-ryuu/" target="_blank">
-                The Cat and the Dragon
-            </a>
-        </div>
+<div class="anime-card" data-name="The Cat and the Dragon">
+    <a href="https://jkanime.net/neko-to-ryuu/" target="_blank">
+        <img src="imagenes/the-cat-and-the-dragon.jpg">
+        The Cat and the Dragon
+    </a>
+</div>
 
-        <div class="anime-card" data-name="The World is Dancing">
-            <a href="https://jkanime.net/world-is-dancing/" target="_blank">
-                The World is Dancing
-            </a>
-        </div>
+<div class="anime-card" data-name="The World is Dancing">
+    <a href="https://jkanime.net/world-is-dancing/" target="_blank">
+        <img src="imagenes/the-world-is-dancing.jpg">
+        The World is Dancing
+    </a>
+</div>
 
-        <div class="anime-card" data-name="The Oblivious Saint Can't Contain Her Power">
-            <a href="https://jkanime.net/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu/" target="_blank">
-                The Oblivious Saint Can't Contain Her Power
-            </a>
-        </div>
+<div class="anime-card" data-name="The Oblivious Saint Can't Contain Her Power">
+    <a href="https://jkanime.net/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu/" target="_blank">
+        <img src="https://cdn.jkdesa.com/assets/images/animes/image/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu.jpg">
+        The Oblivious Saint Can't Contain Her Power
+    </a>
+</div>
 
     </div>
 
