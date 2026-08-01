@@ -1,165 +1,347 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Links</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 20px;
-            background: #111;
-            color: white;
-            font-family: Arial, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        h1 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+<title>Horario de Animes</title>
 
-        .search-box {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
+<style>
 
-        #search {
-            width: 400px;
-            padding: 10px;
-            border-radius: 8px;
-            border: none;
-            font-size: 16px;
-        }
-
-        .anime-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 15px;
-        }
-
-.anime-card {
-    background: #222;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: 0.2s;
-    text-align: center;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
-.anime-card:hover {
-    transform: scale(1.05);
+body{
+    background:#111;
+    color:white;
+    padding:30px;
 }
 
-.anime-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    display: block;
+h1{
+    text-align:center;
+    margin-bottom:25px;
 }
 
-.anime-card a {
-    display: block;
-    padding: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
+.search-box{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:40px;
 }
 
-        @media(max-width: 900px) {
-            .anime-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
+#search{
+    width:450px;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
 
-        @media(max-width: 600px) {
-            .anime-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+button{
+    padding:12px 25px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    background:#3f7cff;
+    color:white;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2d68e5;
+}
+
+.day-section{
+    margin-bottom:50px;
+}
+
+.day-title{
+    background:#1d1d1d;
+    padding:12px 20px;
+    border-left:6px solid #3f7cff;
+    border-radius:10px;
+    margin-bottom:20px;
+    font-size:25px;
+}
+
+.anime-container{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(180px,1fr));
+    gap:18px;
+
+}
+
+.anime-card{
+
+    background:#222;
+    border-radius:12px;
+    overflow:hidden;
+    transition:.25s;
+
+}
+
+.anime-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+.anime-card img{
+
+    width:100%;
+    aspect-ratio:2/3;
+    object-fit:cover;
+    display:block;
+
+}
+
+.anime-card a{
+
+    text-decoration:none;
+    color:white;
+
+}
+
+.anime-card span{
+
+    display:block;
+    padding:10px;
+    text-align:center;
+    font-weight:bold;
+
+}
+
+@media(max-width:700px){
+
+    #search{
+        width:100%;
+    }
+
+    .search-box{
+        flex-direction:column;
+    }
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-    <h1>Lista de Animes</h1>
+<h1>Horario de Animes</h1>
 
-    <div class="search-box">
-        <input type="text" id="search" placeholder="Buscar anime...">
-    </div>
+<div class="search-box">
 
-    <div class="anime-container" id="animeList">
+<input type="text" id="search" placeholder="Buscar anime...">
+
+<button>Buscar</button>
+
+</div>
+
+<!-- ======================= -->
+<!-- LUNES -->
+<!-- ======================= -->
+
+<div class="day-section">
+
+<h2 class="day-title">Lunes</h2>
+
+<div class="anime-container">
 
 <div class="anime-card" data-name="Lord of Mysteries Specials">
-    <a href="https://jkanime.net/guimi-zhi-zhu-tebie-pian-liewu/" target="_blank">
-        <img src="imagenes/lord-of-mysteries.jpg">
-        Lord of Mysteries Specials
-    </a>
+
+<a href="https://jkanime.net/guimi-zhi-zhu-tebie-pian-liewu/" target="_blank">
+
+<img src="imagenes/lord-of-mysteries.jpg">
+
+<span>Lord of Mysteries Specials</span>
+
+</a>
+
 </div>
 
-<div class="anime-card" data-name="Heroine? Saint? No, I'm an All-Works Maid (And Proud of It)!">
-    <a href="https://jkanime.net/heroine-seijo-iie-all-works-maid-desu-hokori/" target="_blank">
-        <img src="imagenes/heroine-all-works-maid.jpg">
-        Heroine? Saint? No, I'm an All-Works Maid (And Proud of It)!
-    </a>
-</div>
+<div class="anime-card" data-name="Heroine Saint">
 
-<div class="anime-card" data-name="From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage">
-    <a href="https://jkanime.net/rakudai-kenja-no-gakuin-musou-nidome-no-tensei-s-rank-cheat-majutsushi-boukenroku/" target="_blank">
-        <img src="imagenes/talentless-sage.jpg">
-        From Overshadowed to Overpowered: Second Reincarnation of a Talentless Sage
-    </a>
+<a href="https://jkanime.net/heroine-seijo-iie-all-works-maid-desu-hokori/" target="_blank">
+
+<img src="imagenes/heroine-all-works-maid.jpg">
+
+<span>Heroine Saint</span>
+
+</a>
+
 </div>
 
 <div class="anime-card" data-name="The Cat and the Dragon">
-    <a href="https://jkanime.net/neko-to-ryuu/" target="_blank">
-        <img src="imagenes/the-cat-and-the-dragon.jpg">
-        The Cat and the Dragon
-    </a>
+
+<a href="https://jkanime.net/neko-to-ryuu/" target="_blank">
+
+<img src="imagenes/the-cat-and-the-dragon.jpg">
+
+<span>The Cat and the Dragon</span>
+
+</a>
+
 </div>
 
+</div>
+
+</div>
+
+<!-- ======================= -->
+<!-- MARTES -->
+<!-- ======================= -->
+
+<div class="day-section">
+
+<h2 class="day-title">Martes</h2>
+
+<div class="anime-container">
+
 <div class="anime-card" data-name="The World is Dancing">
-    <a href="https://jkanime.net/world-is-dancing/" target="_blank">
-        <img src="imagenes/the-world-is-dancing.jpg">
-        The World is Dancing
-    </a>
+
+<a href="https://jkanime.net/world-is-dancing/" target="_blank">
+
+<img src="imagenes/the-world-is-dancing.jpg">
+
+<span>The World is Dancing</span>
+
+</a>
+
 </div>
 
 <div class="anime-card" data-name="The Oblivious Saint Can't Contain Her Power">
-    <a href="https://jkanime.net/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu/" target="_blank">
-        <img src="https://cdn.jkdesa.com/assets/images/animes/image/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu.jpg">
-        The Oblivious Saint Can't Contain Her Power
-    </a>
+
+<a href="https://jkanime.net/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu/" target="_blank">
+
+<img src="https://cdn.jkdesa.com/assets/images/animes/image/mujikaku-seijo-wa-kyou-mo-muishiki-ni-chikara-wo-tare-nagasu.jpg">
+
+<span>The Oblivious Saint Can't Contain Her Power</span>
+
+</a>
+
 </div>
 
-    </div>
+</div>
 
-        <script>
+</div>
 
-        const search = document.getElementById("search");
-        const animeCards = document.querySelectorAll(".anime-card");
+<!-- ======================= -->
+<!-- MIERCOLES -->
+<!-- ======================= -->
 
-        search.addEventListener("input", () => {
+<div class="day-section">
 
-            const text = search.value.toLowerCase();
+<h2 class="day-title">Miércoles</h2>
 
-            animeCards.forEach(card => {
+<div class="anime-container">
 
-                const name = card.dataset.name.toLowerCase();
+<!-- Agrega aquí los animes del miércoles -->
 
-                if (name.includes(text)) {
-                    card.style.display = "block";
-                } else {
-                    card.style.display = "none";
-                }
+</div>
 
-            });
+</div>
+
+<!-- ======================= -->
+<!-- JUEVES -->
+<!-- ======================= -->
+
+<div class="day-section">
+
+<h2 class="day-title">Jueves</h2>
+
+<div class="anime-container">
+
+</div>
+
+</div>
+
+<!-- ======================= -->
+<!-- VIERNES -->
+<!-- ======================= -->
+
+<div class="day-section">
+
+<h2 class="day-title">Viernes</h2>
+
+<div class="anime-container">
+
+</div>
+
+</div>
+
+<!-- ======================= -->
+<!-- SABADO -->
+<!-- ======================= -->
+
+<div class="day-section">
+
+<h2 class="day-title">Sábado</h2>
+
+<div class="anime-container">
+
+</div>
+
+</div>
+
+<!-- ======================= -->
+<!-- DOMINGO -->
+<!-- ======================= -->
+
+<div class="day-section">
+
+<h2 class="day-title">Domingo</h2>
+
+<div class="anime-container">
+
+</div>
+
+</div>
+
+<script>
+
+const search=document.getElementById("search");
+const sections=document.querySelectorAll(".day-section");
+
+search.addEventListener("input",()=>{
+
+    const text=search.value.toLowerCase();
+
+    sections.forEach(section=>{
+
+        let visible=0;
+
+        section.querySelectorAll(".anime-card").forEach(card=>{
+
+            const name=card.dataset.name.toLowerCase();
+
+            if(name.includes(text)){
+
+                card.style.display="block";
+                visible++;
+
+            }else{
+
+                card.style.display="none";
+
+            }
 
         });
 
-    </script>
+        section.style.display=visible?"block":"none";
+
+    });
+
+});
+
+</script>
 
 </body>
 </html>
